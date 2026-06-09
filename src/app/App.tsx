@@ -1,6 +1,7 @@
 import Header from "@/widgets/Header/ui/Header";
 import Sidebar from "@/widgets/Sidebar/ui/Sidebar";
 import { Flex } from "@chakra-ui/react";
+import "./styles/index.css";
 
 function App() {
     return (

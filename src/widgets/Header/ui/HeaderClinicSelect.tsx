@@ -1,8 +1,11 @@
+import { Box } from "@chakra-ui/react";
+
 type HeaderClinicSelectProps = {
     clinicName: string;
 };
+
 const HeaderClinicSelect = ({ clinicName }: HeaderClinicSelectProps) => {
-    return <div>HeaderClinicSelect {clinicName}</div>;
+    return <Box>{clinicName}</Box>;
 };
 
 export default HeaderClinicSelect;

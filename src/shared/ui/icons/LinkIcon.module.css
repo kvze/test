@@ -1,0 +1,14 @@
+.svg {
+    cursor: pointer;
+}
+
+.svg path {
+    transition:
+        fill 0.3s ease,
+        opacity 0.3s ease;
+}
+
+.svg:hover path {
+    fill: blue;
+    opacity: 0.8;
+}

@@ -27,8 +27,12 @@ const Header = ({ title, clinicName, userName }: HeaderProps) => {
             pr={"51px"}
         >
             <HeaderBackButton />
-            <Text>{title}</Text>
-            <LinkIcon />
+            <Flex gap={"16px"} align={"center"}>
+                <Text fontSize={"24px"} fontWeight={"500"}>
+                    {title}
+                </Text>
+                <LinkIcon />
+            </Flex>
             <HeaderClinicSelect clinicName={clinicName} />
             <HeaderUserInfo userName={userName} />
         </Flex>
