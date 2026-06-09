@@ -3,11 +3,12 @@ import type { SidebarItem } from "./types";
 export const sidebarItems: SidebarItem[] = [
     {
         label: "Работники",
+        isDisabled: false,
     },
     {
         label: "База работников",
-        isActive: true,
         hasDot: true,
+        isDisabled: false,
     },
     {
         label: "Карьерные записи",
@@ -15,6 +16,7 @@ export const sidebarItems: SidebarItem[] = [
     },
     {
         label: "Обращения",
+        isDisabled: false,
     },
     {
         label: "Приемы",
@@ -48,9 +50,11 @@ export const sidebarItems: SidebarItem[] = [
     },
     {
         label: "Журналы",
+        isDisabled: false,
     },
     {
         label: "Отчеты",
+        isDisabled: false,
     },
 
     { label: "Отчеты по мед. деятельности", isDisabled: true },
@@ -59,16 +63,20 @@ export const sidebarItems: SidebarItem[] = [
 
     {
         label: "Склад",
+        isDisabled: false,
     },
     { label: "Учет мед. препаратов", isDisabled: true },
     {
         label: "Анкетирование",
+        isDisabled: false,
     },
     {
         label: "Бракераж",
+        isDisabled: false,
     },
     {
         label: "Администрирование",
+        isDisabled: false,
     },
     { label: "Пользователи", isDisabled: true },
     { label: "Организации", isDisabled: true },

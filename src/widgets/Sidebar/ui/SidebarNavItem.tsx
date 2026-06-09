@@ -1,4 +1,5 @@
-import { Box, HStack, Stack, Text, VStack } from "@chakra-ui/react";
+import OrangeDotIcon from "@/shared/ui/icons/OrangeDotIcon";
+import { Box, Flex } from "@chakra-ui/react";
 import type { SidebarItem } from "../model/types";
 
 type SidebarNavItemProps = {
@@ -10,47 +11,18 @@ export function SidebarNavItem({ item, level = 0 }: SidebarNavItemProps) {
     const hasChildren = Boolean(item.items?.length);
 
     return (
-        <Box>
-            <HStack
-                as="button"
-                w="100%"
-                justify="space-between"
-                py="4px"
-                pl={level > 0 ? `${level * 20}px` : "0"}
-                textAlign="left"
-                cursor={item.isDisabled ? "default" : "pointer"}
-                opacity={item.isDisabled ? 0.45 : 1}
-                _hover={
-                    item.isDisabled
-                        ? {}
-                        : {
-                              color: "#1f2a44",
-                          }
-                }
-            >
-                <Stack gap="6px">
-                    <Text
-                        fontSize={"14px"}
-                        fontWeight={"400"}
-                        color={
-                            item.isActive
-                                ? "#4f5f7f"
-                                : level === 0
-                                  ? "#4f5f7f"
-                                  : "#8b96ad"
-                        }
-                    >
-                        {item.label}
-                    </Text>
-
-                    {item.hasDot && (
-                        <Box w="6px" h="6px" borderRadius="50%" bg="#ff7a00" />
-                    )}
-                </Stack>
-            </HStack>
-
+        <Box
+            color={"#5b6283"}
+            opacity={item.isDisabled ? 0.5 : 1}
+            pl={level === 0 ? "0px" : "20px"}
+            pb={hasChildren ? "0px" : "10px"}
+        >
+            <Flex gap={"5px"}>
+                {item.label}
+                {item.hasDot && <OrangeDotIcon />}
+            </Flex>
             {hasChildren && (
-                <VStack align="stretch" gap="2px" mt="4px">
+                <Box pt={"10px"}>
                     {item.items?.map((child) => (
                         <SidebarNavItem
                             key={child.label}
@@ -58,7 +30,7 @@ export function SidebarNavItem({ item, level = 0 }: SidebarNavItemProps) {
                             level={level + 1}
                         />
                     ))}
-                </VStack>
+                </Box>
             )}
         </Box>
     );
