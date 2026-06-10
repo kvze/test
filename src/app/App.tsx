@@ -12,7 +12,6 @@ function App() {
                     <Sidebar />
                     <Header
                         title={"Константинопольский Константин Константинович"}
-                        clinicName={"Здравпункт 1"}
                     />
                 </Flex>
             </CurrentUserProvider>
