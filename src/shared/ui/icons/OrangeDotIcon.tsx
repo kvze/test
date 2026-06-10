@@ -2,7 +2,7 @@ import { Box } from "@chakra-ui/react";
 
 const OrangeDotIcon = () => {
     return (
-        <Box justifyContent={"center"} alignContent={"center"} pt={"3px"}>
+        <Box justifyContent={"center"} alignContent={"center"}>
             <svg
                 width="10"
                 height="10"

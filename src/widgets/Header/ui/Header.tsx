@@ -1,16 +1,14 @@
 import LinkIcon from "@/shared/ui/icons/LinkIcon";
 import { Flex, Text } from "@chakra-ui/react";
 import HeaderBackButton from "./HeaderBackButton";
-import HeaderClinicSelect from "./HeaderClinicSelect";
+import { HeaderClinicSelect } from "./HeaderClinicSelect";
 import HeaderUserInfo from "./HeaderUserInfo";
 
 type HeaderProps = {
     title: string;
-    clinicName: string;
-    userName: string;
 };
 
-const Header = ({ title, clinicName, userName }: HeaderProps) => {
+const Header = ({ title }: HeaderProps) => {
     return (
         <Flex
             as={"header"}
@@ -26,15 +24,19 @@ const Header = ({ title, clinicName, userName }: HeaderProps) => {
             pb={"24px"}
             pr={"51px"}
         >
-            <HeaderBackButton />
-            <Flex gap={"16px"} align={"center"}>
-                <Text fontSize={"24px"} fontWeight={"500"}>
-                    {title}
-                </Text>
-                <LinkIcon />
+            <Flex gap={"31px"}>
+                <HeaderBackButton />
+                <Flex gap={"16px"} align={"center"}>
+                    <Text fontSize={"24px"} fontWeight={"500"}>
+                        {title}
+                    </Text>
+                    <LinkIcon />
+                </Flex>
             </Flex>
-            <HeaderClinicSelect clinicName={clinicName} />
-            <HeaderUserInfo userName={userName} />
+            <Flex gap={"27px"}>
+                <HeaderClinicSelect />
+                <HeaderUserInfo />
+            </Flex>
         </Flex>
     );
 };
