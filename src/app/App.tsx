@@ -1,6 +1,7 @@
+import EmployeePage from "@/pages/EmployeePage/EmployeePage";
 import Header from "@/widgets/Header/ui/Header";
 import Sidebar from "@/widgets/Sidebar/ui/Sidebar";
-import { Flex } from "@chakra-ui/react";
+import { Box, Flex } from "@chakra-ui/react";
 import { CurrentUserProvider } from "./providers/CurrentUserProvider";
 import "./styles/index.css";
 
@@ -10,9 +11,14 @@ function App() {
             <CurrentUserProvider>
                 <Flex>
                     <Sidebar />
-                    <Header
-                        title={"Константинопольский Константин Константинович"}
-                    />
+                    <Box>
+                        <Header
+                            title={
+                                "Константинопольский Константин Константинович"
+                            }
+                        />
+                        <EmployeePage />
+                    </Box>
                 </Flex>
             </CurrentUserProvider>
         </>
