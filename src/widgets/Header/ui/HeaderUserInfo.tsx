@@ -1,4 +1,4 @@
-import { useCurrentUser } from "@/app/hooks/useCurrentUser";
+import { useCurrentUser } from "@/entities/user/model/useCurrentUser";
 import UserIcon from "@/shared/ui/icons/UserIcon";
 import { Flex, Text } from "@chakra-ui/react";
 
