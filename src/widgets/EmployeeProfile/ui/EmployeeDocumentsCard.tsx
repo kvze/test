@@ -1,6 +1,7 @@
 import type { EmployeeDocuments } from "@/entities/employee/model/types";
 import { InfoCard } from "@/shared/ui/InfoCard/InfoCard";
 import { InfoRow } from "@/shared/ui/InfoRow/InfoRow";
+import CopyIcon from "@/shared/ui/icons/CopyIcon";
 import { Button, VStack } from "@chakra-ui/react";
 
 type EmployeeDocumentsCardProps = {
@@ -13,12 +14,13 @@ export function EmployeeDocumentsCard({
     onOpenDetails,
 }: EmployeeDocumentsCardProps) {
     return (
-        <InfoCard title="Данные документов" action="✎">
-            <VStack align="stretch" gap="10px">
+        <InfoCard title="Данные документов">
+            <VStack align="stretch" gap="10px" h="100%">
                 <InfoRow label="Вид документа" value={documents.documentType} />
                 <InfoRow
                     label="Серия и номер"
                     value={documents.seriesAndNumber}
+                    actions={<CopyIcon />}
                 />
                 <InfoRow label="Дата выдачи" value={documents.issueDate} />
                 <InfoRow label="Кем выдан" value={documents.issuedBy} />
@@ -33,14 +35,17 @@ export function EmployeeDocumentsCard({
 
                 <Button
                     alignSelf="start"
-                    mt="10px"
+                    mt="auto"
+                    mb="6px"
+                    ml={"6px"}
                     h="24px"
+                    minH="24px"
                     px="10px"
-                    bg="#20242b"
+                    bg="#303235"
                     color="white"
                     borderRadius="2px"
-                    fontSize="11px"
-                    fontWeight="400"
+                    fontSize="12px"
+                    fontWeight="500"
                     _hover={{ bg: "#2d333d" }}
                     onClick={onOpenDetails}
                 >

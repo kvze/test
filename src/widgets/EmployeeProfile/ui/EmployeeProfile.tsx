@@ -32,7 +32,7 @@ export function EmployeeProfile({
 
             <Grid
                 templateColumns="280px minmax(280px, 1fr) minmax(290px, 1fr) minmax(320px, 1.35fr)"
-                gap="16px"
+                gap="15px"
                 alignItems="stretch"
             >
                 <GridItem>
