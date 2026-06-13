@@ -1,7 +1,15 @@
-import type { EmployeeCareer } from "@/data/employee/employee.types";
+import type { EmployeeCareer } from "@/data/employee/personalData/employee.types";
 import { InfoCard } from "@/shared/ui/InfoCard/InfoCard";
 import { InfoRow } from "@/shared/ui/InfoRow/InfoRow";
-import { Badge, Box, Button, HStack, Image, Text, VStack } from "@chakra-ui/react";
+import {
+    Badge,
+    Box,
+    Button,
+    HStack,
+    Image,
+    Text,
+    VStack,
+} from "@chakra-ui/react";
 
 type EmployeeCareerCardProps = {
     career: EmployeeCareer;

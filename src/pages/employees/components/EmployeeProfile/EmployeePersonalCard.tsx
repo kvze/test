@@ -1,4 +1,4 @@
-import type { Employee } from "@/data/employee/employee.types";
+import type { Employee } from "@/data/employee/personalData/employee.types";
 import { InfoCard } from "@/shared/ui/InfoCard/InfoCard";
 import { InfoRow } from "@/shared/ui/InfoRow/InfoRow";
 import { HStack, Image, Text, VStack } from "@chakra-ui/react";

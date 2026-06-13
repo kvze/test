@@ -1,4 +1,4 @@
-import type { Employee } from "@/data/employee/employee.types";
+import type { Employee } from "@/data/employee/personalData/employee.types";
 import { Breadcrumbs } from "@/shared/ui/Breadcrumbs/Breadcrumbs";
 import { Box, Grid, GridItem, Image } from "@chakra-ui/react";
 import { EmployeeCareerCard } from "./EmployeeCareerCard";
