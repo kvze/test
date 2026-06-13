@@ -1,0 +1,31 @@
+import type { SVGProps } from "react";
+
+const PlusIcon = ({ style, ...props }: SVGProps<SVGSVGElement>) => {
+    return (
+        <svg
+            width="10"
+            height="10"
+            viewBox="0 0 10 10"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+            aria-hidden="true"
+            {...props}
+            style={{
+                display: "block",
+                flexShrink: 0,
+                width: "10px",
+                height: "10px",
+                ...style,
+            }}
+        >
+            <path
+                fillRule="evenodd"
+                clipRule="evenodd"
+                d="M5 0C5.39449 0 5.71429 0.319797 5.71429 0.714286V4.285L9.28571 4.28571C9.6802 4.28571 10 4.60551 10 5C10 5.39449 9.6802 5.71429 9.28571 5.71429L5.71429 5.71357V9.28571C5.71429 9.6802 5.39449 10 5 10C4.60551 10 4.28571 9.6802 4.28571 9.28571V5.71357L0.714286 5.71429C0.319797 5.71429 0 5.39449 0 5C0 4.60551 0.319797 4.28571 0.714286 4.28571L4.28571 4.285V0.714286C4.28571 0.319797 4.60551 0 5 0Z"
+                fill="currentColor"
+            />
+        </svg>
+    );
+};
+
+export default PlusIcon;
