@@ -20,6 +20,7 @@ export function EmployeeProfile({
             bg="white"
             borderBottom="1px solid"
             borderColor="#dfe6f1"
+            w="100%"
             px="24px"
             pt="22px"
             pb="24px"
@@ -30,7 +31,7 @@ export function EmployeeProfile({
             />
 
             <Grid
-                templateColumns="230px 280px 290px 1fr"
+                templateColumns="280px minmax(280px, 1fr) minmax(290px, 1fr) minmax(320px, 1.35fr)"
                 gap="16px"
                 alignItems="stretch"
             >

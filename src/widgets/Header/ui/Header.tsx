@@ -14,26 +14,27 @@ const Header = ({ title }: HeaderProps) => {
             as={"header"}
             bgColor={"white"}
             color={"#303235"}
-            maxH={"85px"}
+            minH={"85px"}
             borderBottom={"1px solid #dbe5f2"}
-            w={"calc(100% - 320px)"}
+            w="100%"
             align="center"
             justify="space-between"
+            gap="24px"
             pl={"24px"}
             pt={"22px"}
             pb={"24px"}
             pr={"51px"}
         >
-            <Flex gap={"31px"}>
+            <Flex gap={"31px"} minW={0}>
                 <HeaderBackButton />
-                <Flex gap={"16px"} align={"center"}>
-                    <Text fontSize={"24px"} fontWeight={"500"}>
+                <Flex gap={"16px"} align={"center"} minW={0}>
+                    <Text fontSize={"24px"} fontWeight={"500"} lineClamp={2}>
                         {title}
                     </Text>
                     <LinkIcon />
                 </Flex>
             </Flex>
-            <Flex gap={"27px"}>
+            <Flex gap={"27px"} flexShrink={0}>
                 <HeaderClinicSelect />
                 <HeaderUserInfo />
             </Flex>

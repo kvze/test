@@ -15,6 +15,7 @@ export function InfoCard({ title, children, action }: InfoCardProps) {
             borderColor="#d7dbec"
             borderRadius="4px"
             p="12px"
+            h={"411px"}
             minH="305px"
         >
             <HStack justify="space-between" mb="10px">

@@ -9,9 +9,9 @@ function App() {
     return (
         <>
             <CurrentUserProvider>
-                <Flex>
+                <Flex minH="100vh">
                     <Sidebar />
-                    <Box>
+                    <Box flex="1" minW={0}>
                         <Header
                             title={
                                 "Константинопольский Константин Константинович"
