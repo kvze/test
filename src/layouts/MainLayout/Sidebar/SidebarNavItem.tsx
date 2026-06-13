@@ -8,6 +8,7 @@ type SidebarNavItemProps = {
 
 export function SidebarNavItem({ item, level = 0 }: SidebarNavItemProps) {
     const hasChildren = Boolean(item.items?.length);
+    const isInteractive = !item.isDisabled;
 
     return (
         <Box
@@ -16,7 +17,23 @@ export function SidebarNavItem({ item, level = 0 }: SidebarNavItemProps) {
             pl={level === 0 ? "0px" : "20px"}
             pb={hasChildren ? "0px" : "10px"}
         >
-            <Flex gap="5px">
+            <Flex
+                gap="5px"
+                align="center"
+                px="4px"
+                mx="-4px"
+                borderRadius="4px"
+                cursor={isInteractive ? "pointer" : "default"}
+                transition="background-color 0.2s ease, color 0.2s ease"
+                _hover={
+                    isInteractive
+                        ? {
+                              bg: "#f8fafc",
+                              color: "#303235",
+                          }
+                        : undefined
+                }
+            >
                 {item.label}
                 {item.hasDot && (
                     <Box

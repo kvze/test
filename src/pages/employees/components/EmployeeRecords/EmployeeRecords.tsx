@@ -30,6 +30,7 @@ const EmployeeRecords = ({ tabs, records }: EmployeeRecordsProps) => {
                             fontWeight={"400"}
                             borderRadius={"4px"}
                             gap={"10px"}
+                            cursor="pointer"
                             _hover={
                                 isActive ? { bg: "#242629" } : { bg: "#eef2f7" }
                             }
@@ -49,6 +50,7 @@ const EmployeeRecords = ({ tabs, records }: EmployeeRecordsProps) => {
                 bg={"#303235"}
                 fontSize={"14px"}
                 fontWeight={"400"}
+                cursor="pointer"
                 _hover={{ bg: "#242629" }}
             >
                 <img src="/assets/icons/plus.svg" alt="" />
@@ -96,6 +98,11 @@ const EmployeeRecords = ({ tabs, records }: EmployeeRecordsProps) => {
                                                 boxSize="12px"
                                                 color="#5b6283"
                                                 cursor={"pointer"}
+                                                transition="color 0.2s ease, transform 0.2s ease"
+                                                _hover={{
+                                                    color: "#303235",
+                                                    transform: "translateY(-1px)",
+                                                }}
                                             />
                                         )}
                                     </HStack>
@@ -112,6 +119,9 @@ const EmployeeRecords = ({ tabs, records }: EmployeeRecordsProps) => {
                                     fontSize={"12px"}
                                     fontWeight={"500"}
                                     color={"#717171"}
+                                    cursor="pointer"
+                                    transition="background-color 0.2s ease"
+                                    _hover={{ bg: "#fafbfc" }}
                                 >
                                     <Table.Cell>{record.number}</Table.Cell>
                                     <Table.Cell>
@@ -157,6 +167,12 @@ const EmployeeRecords = ({ tabs, records }: EmployeeRecordsProps) => {
                                         <Icon
                                             as={FiArrowRight}
                                             color="#c7cbd5"
+                                            cursor="pointer"
+                                            transition="color 0.2s ease, transform 0.2s ease"
+                                            _hover={{
+                                                color: "#303235",
+                                                transform: "translateX(2px)",
+                                            }}
                                         />
                                     </Table.Cell>
                                 </Table.Row>

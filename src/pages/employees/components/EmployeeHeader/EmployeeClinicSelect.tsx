@@ -28,8 +28,11 @@ export function EmployeeClinicSelect() {
                     color="#5b6283"
                     fontSize="14px"
                     fontWeight="400"
+                    cursor="pointer"
+                    transition="background-color 0.2s ease, border-color 0.2s ease"
                     _hover={{
                         bg: "#f8fafc",
+                        borderColor: "#94a8c2",
                     }}
                 >
                     <HStack w="100%" justify="space-between">
@@ -60,6 +63,8 @@ export function EmployeeClinicSelect() {
                                 key={clinic.value}
                                 px="16px"
                                 py="8px"
+                                cursor="pointer"
+                                transition="background-color 0.2s ease"
                                 _highlighted={{ bg: "#f8fafc" }}
                             >
                                 <Select.ItemText>

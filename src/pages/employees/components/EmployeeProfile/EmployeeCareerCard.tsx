@@ -22,6 +22,8 @@ const copyIcon = (
         w="10px"
         h="13px"
         cursor="pointer"
+        transition="opacity 0.2s ease"
+        _hover={{ opacity: 0.65 }}
     />
 );
 
@@ -92,6 +94,7 @@ export function EmployeeCareerCard({ career }: EmployeeCareerCardProps) {
                         fontWeight="500"
                         gap="8px"
                         lineHeight="1"
+                        cursor="pointer"
                         _hover={{ bg: "#2d333d" }}
                     >
                         <Image
@@ -116,6 +119,7 @@ export function EmployeeCareerCard({ career }: EmployeeCareerCardProps) {
                         fontWeight="500"
                         gap="8px"
                         lineHeight="1"
+                        cursor="pointer"
                         _hover={{ bg: "#f8fafc" }}
                     >
                         <Image

@@ -15,6 +15,8 @@ const copyIcon = (
         w="10px"
         h="13px"
         cursor="pointer"
+        transition="opacity 0.2s ease"
+        _hover={{ opacity: 0.65 }}
     />
 );
 
@@ -55,6 +57,7 @@ export function EmployeeDocumentsCard({
                     borderRadius="2px"
                     fontSize="12px"
                     fontWeight="500"
+                    cursor="pointer"
                     _hover={{ bg: "#2d333d" }}
                     onClick={onOpenDetails}
                 >

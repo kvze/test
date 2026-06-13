@@ -28,7 +28,11 @@ export function EmployeePhotoCard({ src, alt }: EmployeePhotoCardProps) {
                 h="24px"
                 borderRadius="4px"
                 cursor="pointer"
-                _hover={{ bg: "#6f6f6f" }}
+                transition="background-color 0.2s ease, transform 0.2s ease"
+                _hover={{
+                    bg: "#6f6f6f",
+                    transform: "translateY(-1px)",
+                }}
             />
         </Box>
     );

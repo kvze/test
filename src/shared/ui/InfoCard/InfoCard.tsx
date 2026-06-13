@@ -37,6 +37,8 @@ export function InfoCard({ title, children, status }: InfoCardProps) {
                         w="12px"
                         h="12px"
                         cursor="pointer"
+                        transition="opacity 0.2s ease"
+                        _hover={{ opacity: 0.65 }}
                     />
                 )}
             </HStack>

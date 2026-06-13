@@ -47,6 +47,8 @@ export function EmployeeProfile({
                             w="10px"
                             h="13px"
                             cursor="pointer"
+                            transition="opacity 0.2s ease"
+                            _hover={{ opacity: 0.65 }}
                         />
                     </Box>
                 }

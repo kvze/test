@@ -29,8 +29,9 @@ export function Breadcrumbs({ items, endSlot }: BreadcrumbsProps) {
                             fontSize="14px"
                             color="#5b6283"
                             fontWeight="400"
+                            transition="color 0.2s ease"
                             _hover={{ color: "#3f4050" }}
-                            cursor={item.onClick ? "pointer" : "default"}
+                            cursor="pointer"
                             onClick={item.onClick}
                         >
                             {item.label}

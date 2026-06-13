@@ -27,7 +27,13 @@ const Sidebar = () => {
                     alt=""
                     w="30px"
                     h="30px"
+                    borderRadius="4px"
                     cursor="pointer"
+                    transition="background-color 0.2s ease, opacity 0.2s ease"
+                    _hover={{
+                        bg: "#f3f6fb",
+                        opacity: 0.75,
+                    }}
                 />
             </Flex>
             <SidebarSearch />

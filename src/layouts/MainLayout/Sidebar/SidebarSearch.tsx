@@ -27,6 +27,13 @@ const SidebarSearch = () => {
                     _placeholder={{
                         color: "#a1a7c4",
                     }}
+                    _hover={{
+                        borderColor: "#b7c6db",
+                    }}
+                    _focusVisible={{
+                        borderColor: "#5b6283",
+                        boxShadow: "0 0 0 1px #5b6283",
+                    }}
                     color="black"
                     fontWeight="400"
                     fontSize="16px"

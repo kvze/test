@@ -36,8 +36,11 @@ export function EmployeeHeader({ title }: EmployeeHeaderProps) {
                         w="19px"
                         h="19px"
                         cursor="pointer"
-                        transition="opacity 0.2s ease"
-                        _hover={{ opacity: 0.8 }}
+                        transition="opacity 0.2s ease, transform 0.2s ease"
+                        _hover={{
+                            opacity: 0.75,
+                            transform: "translateY(-1px)",
+                        }}
                     />
                 </Flex>
             </Flex>

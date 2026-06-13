@@ -12,6 +12,7 @@ const EmployeeBackButton = () => {
             px="17px"
             borderRadius="4px"
             color={"#303235"}
+            cursor="pointer"
             _hover={{
                 bg: "#eef2f7",
             }}

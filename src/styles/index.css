@@ -1,3 +1,24 @@
 * {
     font-family: "Inter", sans-serif;
 }
+
+button:not(:disabled),
+[role="button"]:not([aria-disabled="true"]),
+a[href],
+summary {
+    cursor: pointer;
+}
+
+button,
+[role="button"] {
+    transition:
+        background-color 0.2s ease,
+        border-color 0.2s ease,
+        color 0.2s ease,
+        opacity 0.2s ease;
+}
+
+button:disabled,
+[aria-disabled="true"] {
+    cursor: not-allowed;
+}
