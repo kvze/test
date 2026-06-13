@@ -1,21 +1,16 @@
-import Header from "@/widgets/Header/ui/Header";
-import Sidebar from "@/widgets/Sidebar/ui/Sidebar";
-import { Flex } from "@chakra-ui/react";
-import { CurrentUserProvider } from "./providers/CurrentUserProvider";
-import "./styles/index.css";
+import { mockEmployee } from "@/entities/employee/model/mockEmployee";
+import { AppLayout } from "@/layouts/AppLayout/AppLayout";
+import EmployeePage from "@/pages/EmployeePage/EmployeePage";
+import { AppProviders } from "@/providers/AppProviders";
+import "@/styles/index.css";
 
 function App() {
     return (
-        <>
-            <CurrentUserProvider>
-                <Flex>
-                    <Sidebar />
-                    <Header
-                        title={"Константинопольский Константин Константинович"}
-                    />
-                </Flex>
-            </CurrentUserProvider>
-        </>
+        <AppProviders>
+            <AppLayout title={mockEmployee.fullName}>
+                <EmployeePage />
+            </AppLayout>
+        </AppProviders>
     );
 }
 

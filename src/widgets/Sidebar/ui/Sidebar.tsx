@@ -10,6 +10,7 @@ const Sidebar = () => {
         <Box
             as="aside"
             width="320px"
+            flexShrink={0}
             minH="100vh"
             bg="white"
             borderRight="1px solid #dbe5f2"
