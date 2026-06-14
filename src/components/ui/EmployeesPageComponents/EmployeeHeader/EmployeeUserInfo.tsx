@@ -11,12 +11,7 @@ const EmployeeUserInfo = () => {
             transition="background-color 0.2s ease"
             _hover={{ bg: "#f8fafc" }}
         >
-            <Image
-                src="/assets/icons/user.svg"
-                alt=""
-                w="24px"
-                h="24px"
-            />
+            <Image src="/assets/icons/user.svg" alt="" w="24px" h="24px" />
             <Text fontSize="16px" fontWeight="400" color="#5b6283">
                 {mockCurrentUser.shortName}
             </Text>
