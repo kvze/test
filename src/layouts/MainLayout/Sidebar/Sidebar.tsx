@@ -13,7 +13,7 @@ const Sidebar = () => {
             bg="white"
             borderRight="1px solid #dbe5f2"
             px="25px"
-            py="30px"
+            pt="30px"
         >
             <Flex justifyContent="space-between" mb="30px">
                 <Image
