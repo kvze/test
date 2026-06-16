@@ -44,7 +44,13 @@ type FormFieldProps = {
 function FormField({ label, required, children }: FormFieldProps) {
     return (
         <Field.Root>
-            <Field.Label color="#68708f" fontSize="14px" fontWeight="400">
+            <Field.Label
+                color="#68708f"
+                fontSize="14px"
+                fontWeight="400"
+                lineHeight="20px"
+                whiteSpace="nowrap"
+            >
                 {label}
                 {required && (
                     <Text as="span" color="#e53e3e">
@@ -152,12 +158,18 @@ const EmployeeDocumentsFormModal = ({
 
                 <Dialog.Positioner>
                     <Dialog.Content
-                        maxW="805px"
+                        w="977px"
+                        h="719px"
+                        maxW="calc(100vw - 32px)"
+                        maxH="calc(100vh - 32px)"
+                        display="flex"
+                        flexDirection="column"
                         borderRadius="8px"
+                        overflow="hidden"
                         px="24px"
                         py="22px"
                     >
-                        <Dialog.Header p="0" mb="20px">
+                        <Dialog.Header p="0" mb="20px" flexShrink={0}>
                             <HStack justify="space-between" w="100%">
                                 <Dialog.Title
                                     color="#303235"
@@ -180,7 +192,7 @@ const EmployeeDocumentsFormModal = ({
                             </HStack>
                         </Dialog.Header>
 
-                        <Dialog.Body p="0">
+                        <Dialog.Body p="0" flex="1" overflowY="auto">
                             <form onSubmit={handleSubmit}>
                                 <VStack align="stretch" gap="24px">
                                     <Box>
@@ -194,7 +206,7 @@ const EmployeeDocumentsFormModal = ({
                                         </Text>
 
                                         <Grid
-                                            templateColumns="176px 78px 82px 190px 95px"
+                                            templateColumns="176px 78px 104px 190px 116px"
                                             gap="16px"
                                         >
                                             <FormField

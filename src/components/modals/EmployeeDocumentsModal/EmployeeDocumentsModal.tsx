@@ -86,21 +86,25 @@ const EmployeeDocumentsModal = ({
             onOpenChange={(details) => {
                 if (!details.open) onClose();
             }}
-            size="cover"
         >
             <Portal>
                 <Dialog.Backdrop bg="blackAlpha.500" />
 
                 <Dialog.Positioner>
                     <Dialog.Content
-                        maxW="930px"
-                        minH="720px"
+                        w="1124px"
+                        h="904px"
+                        maxW="calc(100vw - 32px)"
+                        maxH="calc(100vh - 32px)"
+                        display="flex"
+                        flexDirection="column"
                         borderRadius="4px"
                         overflow="hidden"
                     >
                         <Dialog.Header
-                            h="80px"
-                            px="26px"
+                            h="68px"
+                            flexShrink={0}
+                            px="24px"
                             borderBottom="1px solid #dbe5f2"
                         >
                             <Dialog.Title
@@ -112,8 +116,21 @@ const EmployeeDocumentsModal = ({
                             </Dialog.Title>
                         </Dialog.Header>
 
-                        <Dialog.Body px="26px" py="28px">
-                            <VStack align="stretch" gap="26px">
+                        <Dialog.Body
+                            display="flex"
+                            flex="1"
+                            minH={0}
+                            overflowY="auto"
+                            px="24px"
+                            py="28px"
+                        >
+                            <VStack
+                                align="stretch"
+                                flex="1"
+                                gap="26px"
+                                minH={0}
+                                w="100%"
+                            >
                                 <DocumentDataSection
                                     title="Основные данные"
                                     subtitle="Данные документов"
@@ -176,6 +193,7 @@ const EmployeeDocumentsModal = ({
                                 <DocumentDataSection
                                     title="Дополнительные данные"
                                     subtitle="Дополнительные данные документов"
+                                    flex="1"
                                     minH="285px"
                                 >
                                     <VStack
@@ -208,7 +226,8 @@ const EmployeeDocumentsModal = ({
                         </Dialog.Body>
 
                         <Dialog.Footer
-                            h="92px"
+                            h="88px"
+                            flexShrink={0}
                             px="22px"
                             borderTop="1px solid #dbe5f2"
                         >

@@ -1,7 +1,7 @@
-import { Box, Text } from "@chakra-ui/react";
+import { Box, Text, type BoxProps } from "@chakra-ui/react";
 import type { ReactNode } from "react";
 
-type DocumentDataSectionProps = {
+type DocumentDataSectionProps = BoxProps & {
     title: string;
     subtitle?: string;
     children: ReactNode;
@@ -13,6 +13,7 @@ const DocumentDataSection = ({
     subtitle,
     children,
     minH,
+    ...boxProps
 }: DocumentDataSectionProps) => {
     return (
         <Box
@@ -21,6 +22,7 @@ const DocumentDataSection = ({
             px="20px"
             py="22px"
             minH={minH}
+            {...boxProps}
         >
             <Text
                 mb="24px"
