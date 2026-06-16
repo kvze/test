@@ -1,16 +1,15 @@
-import { mockEmployee } from "@/entities/employee/model/mockEmployee";
-import { AppLayout } from "@/layouts/AppLayout/AppLayout";
-import EmployeePage from "@/pages/EmployeePage/EmployeePage";
-import { AppProviders } from "@/providers/AppProviders";
+import { MainLayout } from "@/layouts/MainLayout/MainLayout";
+import EmployeePage from "@/pages/employees/EmployeePage";
 import "@/styles/index.css";
+import { ChakraProvider } from "./providers/ChakraProvider";
 
 function App() {
     return (
-        <AppProviders>
-            <AppLayout title={mockEmployee.fullName}>
+        <ChakraProvider>
+            <MainLayout>
                 <EmployeePage />
-            </AppLayout>
-        </AppProviders>
+            </MainLayout>
+        </ChakraProvider>
     );
 }
 
