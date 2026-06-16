@@ -1,4 +1,10 @@
-import { HStack, Image, Portal, Select, createListCollection } from "@chakra-ui/react";
+import {
+    HStack,
+    Image,
+    Portal,
+    Select,
+    createListCollection,
+} from "@chakra-ui/react";
 
 const clinics = createListCollection({
     items: [
@@ -10,11 +16,17 @@ const clinics = createListCollection({
 
 export function EmployeeClinicSelect() {
     return (
-        <Select.Root collection={clinics} defaultValue={["clinic-1"]} w="200px">
+        <Select.Root
+            className="employee-clinic-select"
+            collection={clinics}
+            defaultValue={["clinic-1"]}
+            w="200px"
+        >
             <Select.HiddenSelect />
 
             <Select.Control>
                 <Select.Trigger
+                    className="employee-clinic-select__trigger"
                     border="1px solid #b7c6db"
                     borderRadius="4px"
                     h="40px"

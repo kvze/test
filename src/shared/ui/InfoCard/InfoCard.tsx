@@ -10,6 +10,7 @@ type InfoCardProps = {
 export function InfoCard({ title, children, status }: InfoCardProps) {
     return (
         <Box
+            className="info-card"
             bg="white"
             border="1px solid"
             borderColor="#d7dbec"

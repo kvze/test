@@ -17,6 +17,7 @@ export function EmployeeProfile({
 }: EmployeeProfileProps) {
     return (
         <Box
+            className="employee-profile"
             bg="white"
             borderBottom="1px solid"
             borderColor="#dfe6f1"
@@ -55,29 +56,30 @@ export function EmployeeProfile({
             />
 
             <Grid
+                className="employee-profile__grid"
                 templateColumns="280px minmax(280px, 1fr) minmax(290px, 1fr) minmax(320px, 1.35fr)"
                 gap="15px"
                 alignItems="stretch"
             >
-                <GridItem>
+                <GridItem className="employee-profile__photo">
                     <EmployeePhotoCard
                         src={employee.photo}
                         alt={employee.fullName}
                     />
                 </GridItem>
 
-                <GridItem>
+                <GridItem className="employee-profile__personal">
                     <EmployeePersonalCard employee={employee} />
                 </GridItem>
 
-                <GridItem>
+                <GridItem className="employee-profile__documents">
                     <EmployeeDocumentsCard
                         documents={employee.documents}
                         onOpenDetails={onOpenDocumentDetails}
                     />
                 </GridItem>
 
-                <GridItem>
+                <GridItem className="employee-profile__career">
                     <EmployeeCareerCard career={employee.career} />
                 </GridItem>
             </Grid>

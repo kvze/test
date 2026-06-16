@@ -3,6 +3,7 @@ import { Button, Image } from "@chakra-ui/react";
 const EmployeeBackButton = () => {
     return (
         <Button
+            className="employee-back-button"
             w="166px"
             h="40px"
             bgColor="#f0f0f0"

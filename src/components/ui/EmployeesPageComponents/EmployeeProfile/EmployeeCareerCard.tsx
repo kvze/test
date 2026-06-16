@@ -40,7 +40,12 @@ export function EmployeeCareerCard({ career }: EmployeeCareerCardProps) {
                 </HStack>
             }
         >
-            <VStack align="stretch" gap="10px" h="100%">
+            <VStack
+                className="employee-career-card__content"
+                align="stretch"
+                gap="10px"
+                h="100%"
+            >
                 <InfoRow
                     label="Таб. номер"
                     value={career.personnelNumber}
@@ -82,7 +87,13 @@ export function EmployeeCareerCard({ career }: EmployeeCareerCardProps) {
                     }
                 />
 
-                <HStack mt="auto" mb="6px" gap="6px" ml="6px">
+                <HStack
+                    className="employee-career-card__actions"
+                    mt="auto"
+                    mb="6px"
+                    gap="6px"
+                    ml="6px"
+                >
                     <Button
                         h="24px"
                         minH="24px"

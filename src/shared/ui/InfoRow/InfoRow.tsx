@@ -9,8 +9,14 @@ type InfoRowProps = {
 
 export function InfoRow({ label, value, actions }: InfoRowProps) {
     return (
-        <Grid gridTemplateColumns="120px 1fr" gap="12px" alignItems="start">
+        <Grid
+            className="info-row"
+            gridTemplateColumns="120px 1fr"
+            gap="12px"
+            alignItems="start"
+        >
             <Text
+                className="info-row__label"
                 fontSize="12px"
                 color="#5a607f"
                 fontWeight={"500"}
@@ -20,8 +26,9 @@ export function InfoRow({ label, value, actions }: InfoRowProps) {
                 {label}
             </Text>
 
-            <HStack gap="6px" align="center" minW={0}>
+            <HStack className="info-row__content" gap="6px" align="center" minW={0}>
                 <Box
+                    className="info-row__value"
                     fontSize="12px"
                     fontWeight={"500"}
                     color="#5a607f"

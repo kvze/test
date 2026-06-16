@@ -7,6 +7,7 @@ const Sidebar = () => {
     return (
         <Box
             as="aside"
+            className="app-sidebar"
             width="320px"
             flexShrink={0}
             minH="100vh"
@@ -15,14 +16,20 @@ const Sidebar = () => {
             px="25px"
             pt="30px"
         >
-            <Flex justifyContent="space-between" mb="30px">
+            <Flex
+                className="app-sidebar__header"
+                justifyContent="space-between"
+                mb="30px"
+            >
                 <Image
+                    className="app-sidebar__logo"
                     src="/assets/logo/app-logo.svg"
                     alt="ЕВРАЗ"
                     w="197px"
                     h="30px"
                 />
                 <Image
+                    className="app-sidebar__collapse"
                     src="/assets/icons/sidebar-collapse.svg"
                     alt=""
                     w="30px"

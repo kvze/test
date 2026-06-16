@@ -13,10 +13,18 @@ type BreadcrumbsProps = {
 
 export function Breadcrumbs({ items, endSlot }: BreadcrumbsProps) {
     return (
-        <HStack justify="space-between" mb="18px">
-            <HStack gap="10px">
+        <HStack
+            className="breadcrumbs"
+            justify="space-between"
+            mb="18px"
+        >
+            <HStack className="breadcrumbs__items" gap="10px">
                 {items.map((item, index) => (
-                    <HStack key={`${item.label}-${index}`} gap="10px">
+                    <HStack
+                        className="breadcrumbs__item"
+                        key={`${item.label}-${index}`}
+                        gap="10px"
+                    >
                         {index > 0 && (
                             <Image
                                 src="/assets/icons/breadcrumb-arrow.svg"
@@ -26,6 +34,7 @@ export function Breadcrumbs({ items, endSlot }: BreadcrumbsProps) {
                             />
                         )}
                         <Text
+                            className="breadcrumbs__text"
                             fontSize="14px"
                             color="#5b6283"
                             fontWeight="400"

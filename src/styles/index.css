@@ -22,3 +22,323 @@ button:disabled,
 [aria-disabled="true"] {
     cursor: not-allowed;
 }
+
+@media (min-width: 1441px) and (max-width: 1800px) {
+    .employee-profile__grid {
+        grid-template-areas:
+            "photo personal documents"
+            "career career career";
+        grid-template-columns: 280px minmax(0, 1fr) minmax(0, 1fr) !important;
+        gap: 15px !important;
+    }
+
+    .employee-profile__photo {
+        grid-area: photo;
+        min-width: 0;
+    }
+
+    .employee-profile__personal {
+        grid-area: personal;
+        min-width: 0;
+    }
+
+    .employee-profile__documents {
+        grid-area: documents;
+        min-width: 0;
+    }
+
+    .employee-profile__career {
+        grid-area: career;
+        min-width: 0;
+    }
+
+    .employee-profile__career .info-card {
+        height: auto !important;
+        min-height: 0 !important;
+    }
+
+    .employee-career-card__content {
+        display: grid !important;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        column-gap: 18px;
+        align-content: start;
+    }
+
+    .employee-career-card__actions {
+        flex-wrap: wrap;
+        grid-column: 1 / -1;
+    }
+}
+
+@media (max-width: 1440px) {
+    .app-sidebar {
+        width: 280px !important;
+        padding-left: 16px !important;
+        padding-right: 16px !important;
+        padding-top: 26px !important;
+    }
+
+    .app-sidebar__header {
+        gap: 10px !important;
+    }
+
+    .app-sidebar__logo {
+        width: 197px !important;
+        height: auto !important;
+        max-height: 30px;
+        min-width: 0;
+    }
+
+    .app-sidebar__collapse {
+        flex-shrink: 0;
+    }
+
+    .employee-header {
+        gap: 20px !important;
+        padding-left: 20px !important;
+        padding-right: 24px !important;
+    }
+
+    .employee-header__main {
+        flex: 1 1 420px !important;
+        gap: 22px !important;
+        min-width: 0;
+    }
+
+    .employee-header__title-row {
+        flex: 1 1 auto;
+        min-width: 0;
+    }
+
+    .employee-header__title {
+        flex: 1 1 auto;
+        min-width: 0;
+        font-size: 22px !important;
+        line-height: 1.2 !important;
+        overflow-wrap: anywhere;
+    }
+
+    .employee-header__actions {
+        gap: 20px !important;
+    }
+
+    .employee-back-button {
+        width: 150px !important;
+        flex-shrink: 0 !important;
+        padding-left: 12px !important;
+        padding-right: 12px !important;
+        font-size: 14px !important;
+    }
+
+    .employee-clinic-select {
+        width: 180px !important;
+    }
+
+    .employee-clinic-select__trigger {
+        width: 180px !important;
+    }
+
+    .employee-user-info {
+        flex-shrink: 0 !important;
+        gap: 8px !important;
+    }
+
+    .employee-user-info__name {
+        white-space: nowrap;
+        font-size: 14px !important;
+    }
+
+    .breadcrumbs {
+        align-items: flex-start !important;
+        gap: 12px !important;
+        min-width: 0;
+    }
+
+    .breadcrumbs__items {
+        flex-wrap: wrap;
+        min-width: 0;
+    }
+
+    .breadcrumbs__item {
+        min-width: 0;
+    }
+
+    .breadcrumbs__text {
+        overflow-wrap: anywhere;
+    }
+
+    .employee-profile {
+        padding-left: 20px !important;
+        padding-right: 20px !important;
+        padding-top: 18px !important;
+        padding-bottom: 20px !important;
+    }
+
+    .employee-profile__grid {
+        grid-template-areas:
+            "photo personal documents"
+            "career career career";
+        grid-template-columns:
+            minmax(220px, 0.72fr)
+            minmax(230px, 1fr)
+            minmax(230px, 1fr) !important;
+        gap: 15px !important;
+    }
+
+    .employee-profile__photo {
+        grid-area: photo;
+        min-width: 0;
+    }
+
+    .employee-profile__personal {
+        grid-area: personal;
+        min-width: 0;
+    }
+
+    .employee-profile__documents {
+        grid-area: documents;
+        min-width: 0;
+    }
+
+    .employee-profile__career {
+        grid-area: career;
+        min-width: 0;
+    }
+
+    .employee-photo-card {
+        width: 100% !important;
+        height: auto !important;
+        aspect-ratio: 1;
+    }
+
+    .info-card {
+        min-width: 0;
+    }
+
+    .info-row {
+        grid-template-columns: minmax(108px, 38%) minmax(0, 1fr) !important;
+        min-width: 0;
+    }
+
+    .info-row__label,
+    .info-row__value {
+        min-width: 0;
+        overflow-wrap: anywhere;
+    }
+
+    .employee-career-card__content {
+        display: grid !important;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        column-gap: 18px;
+        align-content: start;
+    }
+
+    .employee-career-card__actions {
+        flex-wrap: wrap;
+        grid-column: 1 / -1;
+    }
+
+    .employee-records {
+        padding-left: 20px !important;
+        padding-right: 24px !important;
+        padding-top: 24px !important;
+        min-width: 0;
+    }
+
+    .employee-records__table-wrap {
+        max-width: 100%;
+    }
+}
+
+@media (min-width: 1101px) and (max-width: 1440px) {
+    .employee-profile__career .info-card {
+        height: auto !important;
+        min-height: 0 !important;
+    }
+}
+
+@media (max-width: 1100px) {
+    .app-sidebar {
+        width: 248px !important;
+        padding-left: 18px !important;
+        padding-right: 18px !important;
+        padding-top: 22px !important;
+    }
+
+    .app-sidebar__logo {
+        width: 160px !important;
+    }
+
+    .employee-header {
+        flex-wrap: wrap !important;
+        gap: 14px !important;
+        padding-left: 16px !important;
+        padding-right: 16px !important;
+        padding-top: 18px !important;
+        padding-bottom: 18px !important;
+    }
+
+    .employee-header__main {
+        gap: 16px !important;
+    }
+
+    .employee-header__title {
+        font-size: 20px !important;
+    }
+
+    .employee-header__actions {
+        gap: 14px !important;
+    }
+
+    .employee-clinic-select,
+    .employee-clinic-select__trigger {
+        width: 160px !important;
+    }
+
+    .employee-profile {
+        padding-left: 16px !important;
+        padding-right: 16px !important;
+    }
+
+    .employee-profile__grid {
+        grid-template-areas:
+            "photo personal"
+            "documents career";
+        grid-template-columns: minmax(220px, 0.8fr) minmax(260px, 1fr) !important;
+        gap: 12px !important;
+    }
+
+    .employee-career-card__content {
+        display: flex !important;
+    }
+
+    .employee-records {
+        padding-left: 16px !important;
+        padding-right: 16px !important;
+    }
+}
+
+@media (max-width: 960px) {
+    .app-sidebar {
+        width: 224px !important;
+        padding-left: 16px !important;
+        padding-right: 16px !important;
+    }
+
+    .app-sidebar__logo {
+        width: 150px !important;
+    }
+
+    .employee-profile__grid {
+        grid-template-areas:
+            "photo"
+            "personal"
+            "documents"
+            "career";
+        grid-template-columns: minmax(0, 1fr) !important;
+    }
+
+    .employee-photo-card {
+        max-width: 280px;
+    }
+}

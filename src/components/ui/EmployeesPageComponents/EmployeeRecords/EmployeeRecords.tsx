@@ -14,7 +14,12 @@ type EmployeeRecordsProps = {
 const EmployeeRecords = ({ tabs, records }: EmployeeRecordsProps) => {
     const [activeItem, setActiveItem] = useState(0);
     return (
-        <Box pt={"34px"} pl={"24px"} pr={"51px"}>
+        <Box
+            className="employee-records"
+            pt={"34px"}
+            pl={"24px"}
+            pr={"51px"}
+        >
             <HStack gap={"12px"} mb={"21px"} flexWrap={"wrap"}>
                 {tabs.map((tab) => {
                     const isActive = tab.id === activeItem;
@@ -57,7 +62,7 @@ const EmployeeRecords = ({ tabs, records }: EmployeeRecordsProps) => {
                 Добавить обращение
             </Button>
 
-            <Box overflowX={"auto"}>
+            <Box className="employee-records__table-wrap" overflowX={"auto"}>
                 <Table.Root size="sm" minW="1500px">
                     <Table.Header>
                         <Table.Row>

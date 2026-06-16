@@ -8,6 +8,7 @@ type EmployeePhotoCardProps = {
 export function EmployeePhotoCard({ src, alt }: EmployeePhotoCardProps) {
     return (
         <Box
+            className="employee-photo-card"
             position="relative"
             w="280px"
             h="280px"

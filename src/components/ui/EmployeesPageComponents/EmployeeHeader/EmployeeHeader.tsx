@@ -11,6 +11,7 @@ export function EmployeeHeader({ title }: EmployeeHeaderProps) {
     return (
         <Flex
             as={"header"}
+            className="employee-header"
             bgColor={"white"}
             color={"#303235"}
             minH={"85px"}
@@ -24,10 +25,20 @@ export function EmployeeHeader({ title }: EmployeeHeaderProps) {
             pb={"24px"}
             pr={"51px"}
         >
-            <Flex gap={"31px"} minW={0}>
+            <Flex className="employee-header__main" gap={"31px"} minW={0}>
                 <EmployeeBackButton />
-                <Flex gap={"16px"} align={"center"} minW={0}>
-                    <Text fontSize={"24px"} fontWeight={"500"} lineClamp={2}>
+                <Flex
+                    className="employee-header__title-row"
+                    gap={"16px"}
+                    align={"center"}
+                    minW={0}
+                >
+                    <Text
+                        className="employee-header__title"
+                        fontSize={"24px"}
+                        fontWeight={"500"}
+                        lineClamp={2}
+                    >
                         {title}
                     </Text>
                     <Image
@@ -44,7 +55,11 @@ export function EmployeeHeader({ title }: EmployeeHeaderProps) {
                     />
                 </Flex>
             </Flex>
-            <Flex gap={"27px"} flexShrink={0}>
+            <Flex
+                className="employee-header__actions"
+                gap={"27px"}
+                flexShrink={0}
+            >
                 <EmployeeClinicSelect />
                 <EmployeeUserInfo />
             </Flex>
